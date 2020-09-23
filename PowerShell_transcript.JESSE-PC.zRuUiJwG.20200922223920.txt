@@ -1,0 +1,492 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200922223920
+Username: JESSE-PC\Jesse
+RunAs User: JESSE-PC\Jesse
+Configuration Name: 
+Machine: JESSE-PC (Microsoft Windows NT 10.0.19041.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 8092
+PSVersion: 5.1.19041.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1
+BuildVersion: 10.0.19041.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\Jesse\Documents\PowerShell_transcript.JESSE-PC.zRuUiJwG.20200922223920.txt
+PS C:\WINDOWS\system32> Get-PSDrive
+
+Name           Used (GB)     Free (GB) Provider      Root                                Curren
+                                                                                         tLocat
+                                                                                            ion
+----           ---------     --------- --------      ----                                ------
+Alias                                  Alias
+C                  82.77        149.05 FileSystem    C:\                                 ...m32
+Cert                                   Certificate   \
+Env                                    Environment
+Function                               Function
+HKCU                                   Registry      HKEY_CURRENT_USER
+HKLM                                   Registry      HKEY_LOCAL_MACHINE
+Variable                               Variable
+WSMan                                  WSMan
+Z                 527.37        404.02 FileSystem    Z:\
+
+
+PS C:\WINDOWS\system32> get-alias ?
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+Alias           h -> Get-History
+Alias           r -> Invoke-History
+
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1}
+
+Name           Used (GB)     Free (GB) Provider      Root                                Curren
+                                                                                         tLocat
+                                                                                            ion
+----           ---------     --------- --------      ----                                ------
+C                  82.77        149.04 FileSystem    C:\                                 ...m32
+Z                 527.37        404.02 FileSystem    Z:\
+
+
+PS C:\WINDOWS\system32> get=help -gt
+get=help : The term 'get=help' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get=help -gt
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get=help:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+get=help : The term 'get=help' is not recognized as the name of a cmdlet, function, script
+file, or operable program. Check the spelling of the name, or if a path was included, verify
+that the path is correct and try again.
+At line:1 char:1
++ get=help -gt
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get=help:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\WINDOWS\system32> get-help -gt
+>> TerminatingError(Get-Help): "A parameter cannot be found that matches parameter name 'gt'."
+Get-Help : A parameter cannot be found that matches parameter name 'gt'.
+At line:1 char:10
++ get-help -gt
++          ~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+Get-Help : A parameter cannot be found that matches parameter name 'gt'.
+At line:1 char:10
++ get-help -gt
++          ~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetHelpComm
+   and
+
+PS C:\WINDOWS\system32> get-help where-object
+
+NAME
+    Where-Object
+
+SYNOPSIS
+    Selects objects from a collection based on their property values.
+
+
+SYNTAX
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CContains
+    [-InputObject <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CEQ [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CGE [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CGT [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CIn [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CLE [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CLike [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CLT [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CMatch [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CNE [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CNotContains
+    [-InputObject <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CNotIn [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CNotLike
+    [-InputObject <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -CNotMatch
+    [-InputObject <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -Contains
+    [-InputObject <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-EQ] [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-FilterScript] <System.Management.Automation.ScriptBlock> [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -GE [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -GT [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] -In [-InputObject
+    <System.Management.Automation.PSObject>] [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-InputObject
+    <System.Management.Automation.PSObject>] -Is [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-InputObject
+    <System.Management.Automation.PSObject>] -IsNot [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-InputObject
+    <System.Management.Automation.PSObject>] -LE [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-InputObject
+    <System.Management.Automation.PSObject>] -Like [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-InputObject
+    <System.Management.Automation.PSObject>] -LT [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-InputObject
+    <System.Management.Automation.PSObject>] -Match [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-InputObject
+    <System.Management.Automation.PSObject>] -NE [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-InputObject
+    <System.Management.Automation.PSObject>] -NotContains [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-InputObject
+    <System.Management.Automation.PSObject>] -NotIn [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-InputObject
+    <System.Management.Automation.PSObject>] -NotLike [<CommonParameters>]
+
+    Where-Object [-Property] <System.String> [[-Value] <System.Object>] [-InputObject
+    <System.Management.Automation.PSObject>] -NotMatch [<CommonParameters>]
+
+
+DESCRIPTION
+    The `Where-Object` cmdlet selects objects that have particular property values from the
+    collection of objects that are passed to it. For example, you can use the `Where-Object`
+    cmdlet to select files that were created after a certain date, events with a particular
+    ID, or computers that use a particular version of Windows.
+
+    Starting in Windows PowerShell 3.0, there are two different ways to construct a
+    `Where-Object` command.
+
+    - Script block . You can use a script block to specify the property name, a comparison
+    operator,   and a property value. `Where-Object` returns all objects for which the script
+    block statement is   true.
+
+    For example, the following command gets processes in the Normal priority class, that is,
+    processes   where the value of the PriorityClass property equals Normal.
+
+    `Get-Process | Where-Object {$_.PriorityClass -eq "Normal"}`
+
+    All PowerShell comparison operators are valid in the script block format. For more
+    information   about comparison operators, see about_Comparison_Operators
+    (./About/about_Comparison_Operators.md).
+
+    - Comparison statement . You can also write a comparison statement, which is much more
+    like   natural language. Comparison statements were introduced in Windows PowerShell 3.0.
+
+    For example, the following commands also get processes that have a priority class of
+    Normal. These   commands are equivalent and can be used interchangeably.
+
+    `Get-Process | Where-Object -Property PriorityClass -eq -Value "Normal"`
+
+    `Get-Process | Where-Object PriorityClass -eq "Normal"`
+
+    Starting in Windows PowerShell 3.0, `Where-Object` adds comparison operators as parameters
+    in a   `Where-Object` command. Unless specified, all operators are case-insensitive. Prior
+    to Windows   PowerShell 3.0, the comparison operators in the PowerShell language could be
+    used only in script   blocks.
+
+    When you provide a single Property to `Where-Object`, the value of the property is treated
+    as a boolean expression. When the value of Length is not zero, the expression evaluates to
+    True . For example: `('hi', '', 'there') | Where-Object Length`
+
+    The previous example is functionally equivalent to:
+
+    - `('hi', '', 'there') | Where-Object Length -GT 0`
+
+    - `('hi', '', 'there') | Where-Object {$_.Length -gt 0}`
+
+
+RELATED LINKS
+    Online Version: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/wher
+    e-object?view=powershell-5.1&WT.mc_id=ps-gethelp
+    Compare-Object
+    ForEach-Object
+    Group-Object
+    Measure-Object
+    New-Object
+    Select-Object
+    Sort-Object
+    Tee-Object
+
+REMARKS
+    To see the examples, type: "get-help Where-Object -examples".
+    For more information, type: "get-help Where-Object -detailed".
+    For technical information, type: "get-help Where-Object -full".
+    For online help, type: "get-help Where-Object -online"
+
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} |Select-Object Root, Used, Free
+
+Root         Used         Free
+----         ----         ----
+C:\   88875798528 160028995584
+Z:\  566255263744 433813606400
+
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} |Select-Object *
+
+
+Used            : 88875798528
+Free            : 160028995584
+CurrentLocation : WINDOWS\system32
+Name            : C
+Provider        : Microsoft.PowerShell.Core\FileSystem
+Root            : C:\
+Description     : SSD
+MaximumSize     :
+Credential      : System.Management.Automation.PSCredential
+DisplayRoot     :
+
+Used            : 566255263744
+Free            : 433813606400
+CurrentLocation :
+Name            : Z
+Provider        : Microsoft.PowerShell.Core\FileSystem
+Root            : Z:\
+Description     : Oubliette
+MaximumSize     :
+Credential      : System.Management.Automation.PSCredential
+DisplayRoot     :
+
+
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} | ForEach-Object {"zebra"}
+zebra
+zebra
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} | ForEach-Object Write-Host "Free Space for" $_.root "is" $_.free -ForegroundColor red}
+At line:1 char:130
++ ... rite-Host "Free Space for" $_.root "is" $_.free -ForegroundColor red}
++                                                                         ~
+Unexpected token '}' in expression or statement.
+At line:1 char:130
++ ... rite-Host "Free Space for" $_.root "is" $_.free -ForegroundColor red}
++                                                                         ~
+Unexpected token '}' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} | ForEach-Object Write-Host "Free Space for" $_.root "is" $_.free -ForegroundColor red
+ForEach-Object : Input name "Write-Host" cannot be resolved to a method.
+At line:1 char:46
++ ... ee -gt 1} | ForEach-Object Write-Host "Free Space for" $_.root "is" $ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:PSObject) [ForEach-Object], PSArgumentException
+    + FullyQualifiedErrorId : MethodNotFound,Microsoft.PowerShell.Commands.ForEachObjectCommand
+ForEach-Object : Input name "Write-Host" cannot be resolved to a method.
+At line:1 char:46
++ ... ee -gt 1} | ForEach-Object Write-Host "Free Space for" $_.root "is" $ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:PSObject) [ForEach-Object], PSArgumentExcept
+   ion
+    + FullyQualifiedErrorId : MethodNotFound,Microsoft.PowerShell.Commands.ForEachObjectComman
+   d
+
+ForEach-Object : Input name "Write-Host" cannot be resolved to a method.
+At line:1 char:46
++ ... ee -gt 1} | ForEach-Object Write-Host "Free Space for" $_.root "is" $ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (Z:PSObject) [ForEach-Object], PSArgumentException
+    + FullyQualifiedErrorId : MethodNotFound,Microsoft.PowerShell.Commands.ForEachObjectCommand
+ForEach-Object : Input name "Write-Host" cannot be resolved to a method.
+At line:1 char:46
++ ... ee -gt 1} | ForEach-Object Write-Host "Free Space for" $_.root "is" $ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (Z:PSObject) [ForEach-Object], PSArgumentExcept
+   ion
+    + FullyQualifiedErrorId : MethodNotFound,Microsoft.PowerShell.Commands.ForEachObjectComman
+   d
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} | ForEach-Object {Write-Host "Free Space for" $_.root "is" $_.free -ForegroundColor red}
+Free Space for C:\ is 160027754496
+Free Space for Z:\ is 433813606400
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} | ForEach-Object {Write-Host "Free Space for" $_.root "is" ($_.free/1gb) -ForegroundColor red}
+Free Space for C:\ is 149.039421081543
+Free Space for Z:\ is 404.020404815674
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} | ForEach-Object {Write-Host "Free Space for" $_.root "is" ($_.free/1gb) -ForegroundColor red}"gb"
+>> TerminatingError(ForEach-Object): "Cannot bind parameter 'RemainingScripts'. Cannot convert the "gb" value of type "System.String" to type "System.Management.Automation.ScriptBlock"."
+ForEach-Object : Cannot bind parameter 'RemainingScripts'. Cannot convert the "gb" value of type "System.String" to 
+type "System.Management.Automation.ScriptBlock".
+At line:1 char:138
++ ... "Free Space for" $_.root "is" ($_.free/1gb) -ForegroundColor red}"gb"
++                                                                      ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [ForEach-Object], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.ForEachObjectCommand
+ForEach-Object : Cannot bind parameter 'RemainingScripts'. Cannot convert the "gb" value of
+type "System.String" to type "System.Management.Automation.ScriptBlock".
+At line:1 char:138
++ ... "Free Space for" $_.root "is" ($_.free/1gb) -ForegroundColor red}"gb"
++                                                                      ~~~~
+    + CategoryInfo          : InvalidArgument: (:) [ForEach-Object], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.For
+   EachObjectCommand
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} | ForEach-Object {Write-Host "Free Space for" $_.root "is" ($_.free/1gb) -ForegroundColor red} Write-Host "gb"
+>> TerminatingError(ForEach-Object): "Cannot bind parameter 'RemainingScripts'. Cannot convert the "Write-Host" value of type "System.String" to type "System.Management.Automation.ScriptBlock"."
+ForEach-Object : Cannot bind parameter 'RemainingScripts'. Cannot convert the "Write-Host" value of type 
+"System.String" to type "System.Management.Automation.ScriptBlock".
+At line:1 char:46
++ ... ee -gt 1} | ForEach-Object {Write-Host "Free Space for" $_.root "is"  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [ForEach-Object], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.ForEachObjectCommand
+ForEach-Object : Cannot bind parameter 'RemainingScripts'. Cannot convert the "Write-Host"
+value of type "System.String" to type "System.Management.Automation.ScriptBlock".
+At line:1 char:46
++ ... ee -gt 1} | ForEach-Object {Write-Host "Free Space for" $_.root "is"  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [ForEach-Object], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.For
+   EachObjectCommand
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} | ForEach-Object {Write-Host "Free Space for" $_.root "is" ($_.free/1gb) -ForegroundColor red} 
+Free Space for C:\ is 149.038879394531
+Free Space for Z:\ is 404.020404815674
+PS C:\WINDOWS\system32> {0:N0} -f 10000000000
+0:N0
+PS C:\WINDOWS\system32> "{0:N0}" -f 10000000000
+10,000,000,000
+PS C:\WINDOWS\system32> "{0:%0}" -f 5/444
+Cannot convert value "%500" to type "System.Int32". Error: "Input string was not in a correct format."
+At line:1 char:1
++ "{0:%0}" -f 5/444
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvalidCastFromStringToInteger
+Cannot convert value "%500" to type "System.Int32". Error: "Input string was not in a correct
+format."
+At line:1 char:1
++ "{0:%0}" -f 5/444
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvalidCastFromStringToInteger
+
+PS C:\WINDOWS\system32> "{0:%0}" -f (5/444)
+%1
+PS C:\WINDOWS\system32> "{0:%0}" -f (5/44)
+%11
+PS C:\WINDOWS\system32> "{0:%2}" -f (5/44)
+%2
+PS C:\WINDOWS\system32> "{0:%2}" -f (5/12)
+%2
+PS C:\WINDOWS\system32> "{0:C2}" -f 100000000
+$100,000,000.00
+PS C:\WINDOWS\system32> "{0:C4}" -f 100000000
+$100,000,000.0000
+PS C:\WINDOWS\system32> "{0:p2}" -f 100000000
+10,000,000,000.00%
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} | ForEach-Object {Write-Host "Free Space for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red} 
+At line:1 char:130
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                     ~~~~~~~~~~~~~~~~
+Unexpected token '-ForegroundColor' in expression or statement.
+
+At line:1 char:147
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                                      ~~~
+Unexpected token 'red' in expression or statement.
+
+At line:1 char:146
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                                     ~
+Missing closing ')' in expression.
+At line:1 char:130
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                     ~~~~~~~~~~~~~~~~
+Unexpected token '-ForegroundColor' in expression or statement.
+
+At line:1 char:147
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                                      ~~~
+Unexpected token 'red' in expression or statement.
+
+At line:1 char:146
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                                     ~
+Missing closing ')' in expression.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} | ForEach-Object {Write-Host "Free Space for" $_.root "is" ("{0:N2}" -f ($_.free/1gb)) -ForegroundColor red} 
+Free Space for C:\ is 149.04
+Free Space for Z:\ is 404.02
+PS C:\WINDOWS\system32> Get-PSDrive | Where-Object {$_.free -gt 1} | ForEach-Object {Write-Host "Free Space for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red} 
+At line:1 char:130
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                     ~~~~~~~~~~~~~~~~
+Unexpected token '-ForegroundColor' in expression or statement.
+
+At line:1 char:147
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                                      ~~~
+Unexpected token 'red' in expression or statement.
+
+At line:1 char:146
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                                     ~
+Missing closing ')' in expression.
+At line:1 char:130
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                     ~~~~~~~~~~~~~~~~
+Unexpected token '-ForegroundColor' in expression or statement.
+
+At line:1 char:147
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                                      ~~~
+Unexpected token 'red' in expression or statement.
+
+At line:1 char:146
++ ... ce for" $_.root "is" ("{0:N2}" -f ($_.free/1gb) -ForegroundColor red}
++                                                                     ~
+Missing closing ')' in expression.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\WINDOWS\system32> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20200922230620
+**********************

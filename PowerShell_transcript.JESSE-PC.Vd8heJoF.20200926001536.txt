@@ -1,0 +1,179 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200926001536
+Username: JESSE-PC\Jesse
+RunAs User: JESSE-PC\Jesse
+Configuration Name: 
+Machine: JESSE-PC (Microsoft Windows NT 10.0.19041.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 3172
+PSVersion: 5.1.19041.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1
+BuildVersion: 10.0.19041.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\Jesse\Documents\PowerShell_transcript.JESSE-PC.Vd8heJoF.20200926001536.txt
+PS C:\WINDOWS\system32> Get-PSDrive
+
+Name           Used (GB)     Free (GB) Provider      Root                                Curren
+                                                                                         tLocat
+                                                                                            ion
+----           ---------     --------- --------      ----                                ------
+Alias                                  Alias
+C                  83.91        147.90 FileSystem    C:\                                 ...m32
+Cert                                   Certificate   \
+Env                                    Environment
+Function                               Function
+HKCU                                   Registry      HKEY_CURRENT_USER
+HKLM                                   Registry      HKEY_LOCAL_MACHINE
+Variable                               Variable
+WSMan                                  WSMan
+Z                 527.37        404.02 FileSystem    Z:\
+
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1}
+
+Name           Used (GB)     Free (GB) Provider      Root                                Curren
+                                                                                         tLocat
+                                                                                            ion
+----           ---------     --------- --------      ----                                ------
+C                  83.92        147.89 FileSystem    C:\                                 ...m32
+Z                 527.37        404.02 FileSystem    Z:\
+
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | select_object Root, Used, Free
+select_object : The term 'select_object' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:46
++ Get-PSDrive | Where-object {$_.free -gt 1} | select_object Root, Used ...
++                                              ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (select_object:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+select_object : The term 'select_object' is not recognized as the name of a cmdlet, function,
+script file, or operable program. Check the spelling of the name, or if a path was included,
+verify that the path is correct and try again.
+At line:1 char:46
++ Get-PSDrive | Where-object {$_.free -gt 1} | select_object Root, Used ...
++                                              ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (select_object:String) [], CommandNotFoundExcept
+   ion
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | select-object Root, Used, Free
+
+Root         Used         Free
+----         ----         ----
+C:\   90089164800 158815629312
+Z:\  566255263744 433813606400
+
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | select-object *
+
+
+Used            : 90089308160
+Free            : 158815485952
+CurrentLocation : WINDOWS\system32
+Name            : C
+Provider        : Microsoft.PowerShell.Core\FileSystem
+Root            : C:\
+Description     : SSD
+MaximumSize     :
+Credential      : System.Management.Automation.PSCredential
+DisplayRoot     :
+
+Used            : 566255263744
+Free            : 433813606400
+CurrentLocation :
+Name            : Z
+Provider        : Microsoft.PowerShell.Core\FileSystem
+Root            : Z:\
+Description     : Oubliette
+MaximumSize     :
+Credential      : System.Management.Automation.PSCredential
+DisplayRoot     :
+
+
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {"zebra"}
+zebra
+zebra
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {Write-host "Free space for" $_.root "is" $_.free }
+Free space for C:\ is 158815526912
+Free space for Z:\ is 433813606400
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {Write-host "Free space for" $_.root "is" $_.free -ForegroundColor red}
+Free space for C:\ is 158815223808
+Free space for Z:\ is 433813606400
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {Write-host "Free space for" $_.root "is"($_.free/1gb) -ForegroundColor red}
+Free space for C:\ is 147.907894134521
+Free space for Z:\ is 404.020404815674
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {Write-host "Free space for" $_.root "is"($_.free/1gb) -ForegroundColor black}
+Free space for C:\ is 147.90747833252
+Free space for Z:\ is 404.020404815674
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {Write-host "Free space for" $_.root "is"($_.free/1gb) -ForegroundColor blue}
+Free space for C:\ is 147.906135559082
+Free space for Z:\ is 404.020404815674
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {Write-host "Free space for" $_.root "is"($_.free/1gb) -ForegroundColor blue}
+Free space for C:\ is 147.902210235596
+Free space for Z:\ is 404.020404815674
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {Write-host "Free space for" $_.root "is"({0:n2} -f ($_.free/1gb)) -ForegroundColor blue}
+Free space for C:\ is 0:n2
+Free space for Z:\ is 0:n2
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {Write-host "Free space for" $_.root "is"("{0:n2}" -f ($_.free/1gb)) -ForegroundColor blue}
+Free space for C:\ is 147.90
+Free space for Z:\ is 404.02
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {Write-host "Free space for" $_.root "is"("{0:c2}" -f ($_.free/1gb)) -ForegroundColor blue}
+Free space for C:\ is $147.90
+Free space for Z:\ is $404.02
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {$c=0; "This runs once"}{$c =$c +1;Write-Host("This loops for each available piped object" $c}{Write-Host "This runs at end. The value of c is" $c}
+At line:1 char:152
++ ... +1;Write-Host("This loops for each available piped object" $c}{Write- ...
++                                                                ~~
+Unexpected token '$c' in expression or statement.
+
+At line:1 char:151
++ ... $c +1;Write-Host("This loops for each available piped object" $c}{Wri ...
++                                                                  ~
+Missing closing ')' in expression.
+At line:1 char:152
++ ... +1;Write-Host("This loops for each available piped object" $c}{Write- ...
++                                                                ~~
+Unexpected token '$c' in expression or statement.
+
+At line:1 char:151
++ ... $c +1;Write-Host("This loops for each available piped object" $c}{Wri ...
++                                                                  ~
+Missing closing ')' in expression.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\WINDOWS\system32> Get-PSDrive | Where-object {$_.free -gt 1} | ForEach-Object {$c=0;Write-Host "This runs once"}{$c =$c +1;Write-Host("This loops for each available piped object" $c}{Write-Host "This runs at end. The value of c is" $c}
+At line:1 char:162
++ ... +1;Write-Host("This loops for each available piped object" $c}{Write- ...
++                                                                ~~
+Unexpected token '$c' in expression or statement.
+
+At line:1 char:161
++ ... $c +1;Write-Host("This loops for each available piped object" $c}{Wri ...
++                                                                  ~
+Missing closing ')' in expression.
+At line:1 char:162
++ ... +1;Write-Host("This loops for each available piped object" $c}{Write- ...
++                                                                ~~
+Unexpected token '$c' in expression or statement.
+
+At line:1 char:161
++ ... $c +1;Write-Host("This loops for each available piped object" $c}{Wri ...
++                                                                  ~
+Missing closing ')' in expression.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\WINDOWS\system32> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20200926004731
+**********************

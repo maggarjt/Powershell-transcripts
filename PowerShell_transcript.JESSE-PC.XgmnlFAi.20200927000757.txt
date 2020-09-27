@@ -1,0 +1,671 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200927000757
+Username: JESSE-PC\Jesse
+RunAs User: JESSE-PC\Jesse
+Configuration Name: 
+Machine: JESSE-PC (Microsoft Windows NT 10.0.19041.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 7808
+PSVersion: 5.1.19041.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1
+BuildVersion: 10.0.19041.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\Jesse\Documents\PowerShell_transcript.JESSE-PC.XgmnlFAi.20200927000757.txt
+PS C:\WINDOWS\system32> cd\
+PS C:\> get-alias cd
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           cd -> Set-Location
+
+
+PS C:\> Set-LocalGroup
+PS C:\> TerminatingError(Set-LocalGroup): "Parameter set cannot be resolved using the specified named parameters."
+Set-LocalGroup : Parameter set cannot be resolved using the specified named parameters.
+At line:1 char:1
++ Set-LocalGroup
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-LocalGroup], ParameterBindingException
+    + FullyQualifiedErrorId : AmbiguousParameterSet,Microsoft.PowerShell.Commands.SetLocalGroupCommand
+Set-LocalGroup : Parameter set cannot be resolved using the specified named parameters.
+At line:1 char:1
++ Set-LocalGroup
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-LocalGroup], ParameterBindingException
+    + FullyQualifiedErrorId : AmbiguousParameterSet,Microsoft.PowerShell.Commands.SetLocalGrou
+   pCommand
+
+PS C:\> Set-Location ./demo
+PS C:\demo> dir
+PS C:\demo> pwd
+
+Path
+----
+C:\demo
+
+
+PS C:\demo> ls
+PS C:\demo> dir
+PS C:\demo> md documet1.txt
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:10 AM                documet1.txt
+
+
+PS C:\demo> dir
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:10 AM                documet1.txt
+
+
+PS C:\demo> md document2.txt
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document2.txt
+
+
+PS C:\demo> md document3.txt
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document3.txt
+
+
+PS C:\demo> md document_3.docx
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document_3.docx
+
+
+PS C:\demo> ls
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document2.txt
+d-----         9/27/2020  12:11 AM                document3.txt
+d-----         9/27/2020  12:11 AM                document_3.docx
+d-----         9/27/2020  12:10 AM                documet1.txt
+
+
+PS C:\demo> del document2.txt
+PS C:\demo> dir
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document3.txt
+d-----         9/27/2020  12:11 AM                document_3.docx
+d-----         9/27/2020  12:10 AM                documet1.txt
+
+
+PS C:\demo> del document3.txt
+PS C:\demo> md document_1.docx
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document_1.docx
+
+
+PS C:\demo> md document_2.docx
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:12 AM                document_2.docx
+
+
+PS C:\demo> dir
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document_1.docx
+d-----         9/27/2020  12:12 AM                document_2.docx
+d-----         9/27/2020  12:11 AM                document_3.docx
+d-----         9/27/2020  12:10 AM                documet1.txt
+
+
+PS C:\demo> del documet1.txt
+PS C:\demo> md Expenses.pdf
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:12 AM                Expenses.pdf
+
+
+PS C:\demo> ld
+ld : The term 'ld' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ ld
++ ~~
+    + CategoryInfo          : ObjectNotFound: (ld:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ld : The term 'ld' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the
+path is correct and try again.
+At line:1 char:1
++ ld
++ ~~
+    + CategoryInfo          : ObjectNotFound: (ld:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\demo> ls
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document_1.docx
+d-----         9/27/2020  12:12 AM                document_2.docx
+d-----         9/27/2020  12:11 AM                document_3.docx
+d-----         9/27/2020  12:12 AM                Expenses.pdf
+
+
+PS C:\demo> New-Item -Name HCESC -ItemType directory
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:14 AM                HCESC
+
+
+PS C:\demo> ls
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document_1.docx
+d-----         9/27/2020  12:12 AM                document_2.docx
+d-----         9/27/2020  12:11 AM                document_3.docx
+d-----         9/27/2020  12:12 AM                Expenses.pdf
+d-----         9/27/2020  12:14 AM                HCESC
+
+
+PS C:\demo> alias ls
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           ls -> Get-ChildItem
+
+
+PS C:\demo> alias dir
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           dir -> Get-ChildItem
+
+
+PS C:\demo> get-item .\Expenses.pdf
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:12 AM                Expenses.pdf
+
+
+PS C:\demo> clear-host
+PS C:\demo> Get-ChildItem .\HCESC\
+PS C:\demo> Get-ChildItem HCESC
+PS C:\demo> cd HCESC
+PS C:\demo\HCESC> md poodle.txt
+
+
+    Directory: C:\demo\HCESC
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:16 AM                poodle.txt
+
+
+PS C:\demo\HCESC> cd..
+PS C:\demo> et-item
+et-item : The term 'et-item' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ et-item
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (et-item:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+et-item : The term 'et-item' is not recognized as the name of a cmdlet, function, script file,
+or operable program. Check the spelling of the name, or if a path was included, verify that
+the path is correct and try again.
+At line:1 char:1
++ et-item
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (et-item:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\demo> get-item
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\demo> TerminatingError(TabExpansion2): "Cannot bind argument to parameter 'inputScript' because it is an empty string."
+PS C:\demo> Get-ChildItem HCESC
+
+
+    Directory: C:\demo\HCESC
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:16 AM                poodle.txt
+
+
+PS C:\demo> get-item hcesc
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:16 AM                hcesc
+
+
+PS C:\demo> alis md
+alis : The term 'alis' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ alis md
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (alis:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+alis : The term 'alis' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the
+path is correct and try again.
+At line:1 char:1
++ alis md
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (alis:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\demo> alias md
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           md -> mkdir
+
+
+PS C:\demo> md MD_folder
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:18 AM                MD_folder
+
+
+PS C:\demo> ls
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document_1.docx
+d-----         9/27/2020  12:12 AM                document_2.docx
+d-----         9/27/2020  12:11 AM                document_3.docx
+d-----         9/27/2020  12:12 AM                Expenses.pdf
+d-----         9/27/2020  12:16 AM                HCESC
+d-----         9/27/2020  12:18 AM                MD_folder
+
+
+PS C:\demo> new-item -ItemType Directory "foldername"
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:19 AM                foldername
+
+
+PS C:\demo> ls
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document_1.docx
+d-----         9/27/2020  12:12 AM                document_2.docx
+d-----         9/27/2020  12:11 AM                document_3.docx
+d-----         9/27/2020  12:12 AM                Expenses.pdf
+d-----         9/27/2020  12:19 AM                foldername
+d-----         9/27/2020  12:16 AM                HCESC
+d-----         9/27/2020  12:18 AM                MD_folder
+
+
+PS C:\demo> copy-item .\expenses.pdf '.\MD_folder'
+PS C:\demo> Get-ChildItem MD_folder
+
+
+    Directory: C:\demo\MD_folder
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:20 AM                expenses.pdf
+
+
+PS C:\demo> cd..
+PS C:\> new-item -ItemType Directory 'demo2'
+
+
+    Directory: C:\
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:21 AM                demo2
+
+
+PS C:\> md test_file_demo2.txt
+
+
+    Directory: C:\
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:21 AM                test_file_demo2.txt
+
+
+PS C:\> ls
+
+
+    Directory: C:\
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         1/21/2017  11:40 PM                a
+d-----          5/2/2016  10:00 AM                AdwCleaner
+d-----        10/27/2013   7:59 PM                AllShare
+d-----         6/18/2020  10:08 AM                Chocolatey
+d-----         9/27/2020  12:19 AM                demo
+d-----         9/27/2020  12:21 AM                demo2
+d-----          6/7/2018   1:47 PM                ESD
+d-----          4/2/2015   7:32 AM                first_app
+d-----         3/29/2016   7:34 AM                Intel
+d-----         9/17/2016  10:51 PM                Logs
+d-----         9/20/2020   3:14 PM                PerfLogs
+d-r---          4/5/2020  12:56 PM                Pictures
+d-r---         9/22/2020  12:39 AM                Program Files
+d-r---         9/26/2020  12:55 PM                Program Files (x86)
+d-----         3/11/2017   6:43 PM                SUPERDelete
+d-----         9/20/2020  11:17 PM                Temp
+d-----         9/27/2020  12:21 AM                test_file_demo2.txt
+d-r---         9/20/2020   1:29 PM                Users
+d-----         9/22/2020  12:39 AM                Windows
+d-----         9/22/2020   1:30 PM                Windows.old
+-a----         1/16/2016  11:02 AM             36 .superId
+-a----         3/23/2014   3:41 PM            597 deltaStartup.log
+-a----         8/18/2016   9:44 AM              2 END
+-a----         11/2/2015   3:28 AM            383 ftconfig.ini
+-a----        12/17/2015   5:26 PM        1661580 IFRToolLog.txt
+-a----          1/5/2016   8:04 PM           1594 InstallHelper.log
+-a----         6/16/2012   1:42 PM            218 lucid.log
+-a----         6/27/2015   4:42 PM           7769 NPClient.log
+
+
+PS C:\> cd demo2
+PS C:\demo2> ls
+PS C:\demo2> md test_file_in_demo2.txt
+
+
+    Directory: C:\demo2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:22 AM                test_file_in_demo2.txt
+
+
+PS C:\demo2> ls
+
+
+    Directory: C:\demo2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:22 AM                test_file_in_demo2.txt
+
+
+PS C:\demo2> cd..
+PS C:\> cd demo
+PS C:\demo> ls
+
+
+    Directory: C:\demo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/27/2020  12:11 AM                document_1.docx
+d-----         9/27/2020  12:12 AM                document_2.docx
+d-----         9/27/2020  12:11 AM                document_3.docx
+d-----         9/27/2020  12:12 AM                Expenses.pdf
+d-----         9/27/2020  12:19 AM                foldername
+d-----         9/27/2020  12:16 AM                HCESC
+d-----         9/27/2020  12:20 AM                MD_folder
+
+
+PS C:\demo> copyt-item * .\demo2\
+copyt-item : The term 'copyt-item' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ copyt-item * .\demo2\
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (copyt-item:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+copyt-item : The term 'copyt-item' is not recognized as the name of a cmdlet, function, script
+file, or operable program. Check the spelling of the name, or if a path was included, verify
+that the path is correct and try again.
+At line:1 char:1
++ copyt-item * .\demo2\
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (copyt-item:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\demo> copy-item* .\demo2\
+copy-item* : The term 'copy-item*' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ copy-item* .\demo2\
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (copy-item*:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+copy-item* : The term 'copy-item*' is not recognized as the name of a cmdlet, function, script
+file, or operable program. Check the spelling of the name, or if a path was included, verify
+that the path is correct and try again.
+At line:1 char:1
++ copy-item* .\demo2\
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (copy-item*:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\demo> copy-item * .\demo2\
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\document_2.docx:String) [Copy-Item], PSArgumentException
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyItemCommand
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\document_2.docx:String) [Copy-Item], P
+   SArgumentException
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyI
+   temCommand
+
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\document_3.docx:String) [Copy-Item], PSArgumentException
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyItemCommand
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\document_3.docx:String) [Copy-Item], P
+   SArgumentException
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyI
+   temCommand
+
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\Expenses.pdf:String) [Copy-Item], PSArgumentException
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyItemCommand
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\Expenses.pdf:String) [Copy-Item], PSAr
+   gumentException
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyI
+   temCommand
+
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\foldername:String) [Copy-Item], PSArgumentException
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyItemCommand
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\foldername:String) [Copy-Item], PSArgu
+   mentException
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyI
+   temCommand
+
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\HCESC:String) [Copy-Item], PSArgumentException
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyItemCommand
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\HCESC:String) [Copy-Item], PSArgumentE
+   xception
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyI
+   temCommand
+
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\MD_folder:String) [Copy-Item], PSArgumentException
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyItemCommand
+copy-item : Container cannot be copied onto existing leaf item.
+At line:1 char:1
++ copy-item * .\demo2\
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\demo\MD_folder:String) [Copy-Item], PSArgum
+   entException
+    + FullyQualifiedErrorId : CopyContainerItemToLeafError,Microsoft.PowerShell.Commands.CopyI
+   temCommand
+
+PS C:\demo> stop_transcript
+stop_transcript : The term 'stop_transcript' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+again.
+At line:1 char:1
++ stop_transcript
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (stop_transcript:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+stop_transcript : The term 'stop_transcript' is not recognized as the name of a cmdlet,
+function, script file, or operable program. Check the spelling of the name, or if a path was
+included, verify that the path is correct and try again.
+At line:1 char:1
++ stop_transcript
++ ~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (stop_transcript:String) [], CommandNotFoundExce
+   ption
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\demo> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20200927002743
+**********************
